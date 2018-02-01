@@ -83,6 +83,10 @@ exports.BarService = BarService;
 exports.FooComponent = FooComponent;
 exports.MyLibModule = MyLibModule;
 
+window.BarService = BarService;
+window.FooComponent = FooComponent;
+window.MyLibModule = MyLibModule;
+
 Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
