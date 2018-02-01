@@ -1,9 +1,8 @@
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs/Observable'), require('rxjs/add/observable/of'), require('rxjs/add/operator/map'), require('@angular/common')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', 'rxjs/Observable', 'rxjs/add/observable/of', 'rxjs/add/operator/map', '@angular/common'], factory) :
-	(factory((global.my = global.my || {}, global.my.lib = {}),global.ng.core,global.Rx,global.Rx.Observable,global.Rx.Observable.prototype,global.ng.common));
-}(this, (function (exports,core,Observable,of,map,common) { 'use strict';
-
+import { Component, Injectable, NgModule } from '@angular/core';
+import { Observable as Observable$1 } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/map';
+import { CommonModule } from '@angular/common';
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
@@ -16,7 +15,7 @@ var BarService = /** @class */ (function () {
          * @return {?}
          */
         get: function () {
-            return Observable.Observable.of(true)
+            return Observable$1.of(true)
                 .map(function (val) { return "" + val; });
         },
         enumerable: true,
@@ -25,7 +24,7 @@ var BarService = /** @class */ (function () {
     return BarService;
 }());
 BarService.decorators = [
-    { type: core.Injectable },
+    { type: Injectable },
 ];
 /** @nocollapse */
 BarService.ctorParameters = function () { return []; };
@@ -39,7 +38,7 @@ var FooComponent = /** @class */ (function () {
     return FooComponent;
 }());
 FooComponent.decorators = [
-    { type: core.Component, args: [{
+    { type: Component, args: [{
                 selector: 'my-foo',
                 template: "<p>Hello Pepito</p>\n",
                 styles: ["h1 {\n  color: #ff00ff; }\n"]
@@ -58,9 +57,9 @@ var MyLibModule = /** @class */ (function () {
     return MyLibModule;
 }());
 MyLibModule.decorators = [
-    { type: core.NgModule, args: [{
+    { type: NgModule, args: [{
                 imports: [
-                    common.CommonModule
+                    CommonModule
                 ],
                 declarations: [
                     FooComponent
@@ -78,16 +77,16 @@ MyLibModule.decorators = [
 ];
 /** @nocollapse */
 MyLibModule.ctorParameters = function () { return []; };
-
-exports.BarService = BarService;
-exports.FooComponent = FooComponent;
-exports.MyLibModule = MyLibModule;
-
-window.BarService = BarService;
-window.FooComponent = FooComponent;
-window.MyLibModule = MyLibModule;
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
-//# sourceMappingURL=my-lib.umd.js.map
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * Generated bundle index. Do not edit.
+ */
+export { BarService, FooComponent, MyLibModule };
+//# sourceMappingURL=my-lib.js.map
